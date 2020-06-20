@@ -1,0 +1,419 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* задаем основные цвета */
+:root {
+  --primary-text-color: #757575;
+  --main-title-color: #212121;
+  --main-accent-color: #2196f3;
+  --main-background-color: #ffffff;
+  --secondary-background-color: #f5f4fa;
+}
+
+/* общие стили для тегов и классов */
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+
+  color: var(--primary-text-color);
+  background-color: var(--main-background-color);
+}
+
+/* убираем все метки со списков */
+li {
+  list-style: none;
+}
+
+/* задаем ссылкам наследуемый цвет */
+/* убираем подчеркивание ссылок */
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+/* задаем блочность изображений */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* создаем класс для скрытия контента */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* задаем ширину контейнера (ранее была 1230px) */
+/* задаем основные отступы контейнерам */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: 1200px;
+}
+
+/* ВНИМАНИЕ КОСТЫЛИ */
+/* помощь для верстки */
+/* при финале скрыть */
+/* видимость контейнеров */
+/* .container,
+.section {
+  outline: 1px solid tomato;
+} */
+
+/* .card-upper-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+/* header {
+  background-color: turquoise;
+}
+section.hero {
+  background-color: violet;
+}
+section.features {
+  background-color: wheat;
+}
+section.work {
+  background-color: yellow;
+}
+section.team {
+  background-color: blue;
+}
+section.clients {
+  background-color: coral;
+} */
+
+/* header */
+
+/* задаем флекс всему хэдэру */
+/* вертикально выравниваем элементы флекса */
+/* задаем минимально возможную высоту header */
+/* задаем цвет шрифта нафигации */
+/* задаем задний фон */
+.page-header {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+
+  color: var(--main-title-color);
+}
+
+/* задаем шрифт логотипу */
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+/* задаем правый отступ от логотипа */
+.page-header .logo {
+  margin-right: 85px;
+}
+
+/* меняем цвет левой части логотипа */
+.logo-left {
+  color: var(--main-accent-color);
+}
+
+/* задаем флекс списку навигации */
+/* обнуляем верхний, нижний и левый отступы списка навигации */
+.nav > ul {
+  display: flex;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* задаем правый зазор между элементами навигации */
+.site-nav li:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* задаем строчно-блочный формат элементам навигации */
+/* задаем внутрений отступ от верхней и нижней границ header до элементов навигации */
+/* задаем шрифт элементам навигации */
+.nav .link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/* задаем цвет шрифта элементам навигации */
+.nav .link {
+  color: var(--main-title-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* задаем цвет шрифта текущего элемента навигации */
+.link.current {
+  position: relative;
+  color: var(--main-accent-color);
+}
+
+.current::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--main-accent-color);
+}
+
+/* задаем ховер и фокус элементам навигации */
+.link:hover,
+.link:focus {
+  color: var(--main-accent-color);
+  fill: var(--main-accent-color);
+  cursor: pointer;
+}
+
+/* задаем флекс контактам */
+/* убираем верхний, нижний и правый отступ у списка контактов */
+/* прижимаем контакты к правой границе header */
+.contacts {
+  display: flex;
+  /* align-items: center; */
+
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-left: 0;
+}
+
+/* задаем зазор между контактами */
+.contacts li:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* задаем цвет шрифта элементам контактов */
+.mail-tel {
+  color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts .mail-tel {
+  display: flex;
+  align-items: center;
+}
+.icon-mail {
+  width: 16px;
+  height: 11.2px;
+  margin-right: 10px;
+}
+.icon-phone {
+  width: 10px;
+  height: 14.94px;
+  margin-right: 10px;
+}
+.icon-contacts {
+  fill: currentColor;
+}
+
+/* footer */
+
+/* задаем цвет и задний фон футера */
+.footer {
+  color: #ffffff;
+  background-color: #2f303a;
+}
+/* Задаем флекс верхней части футера */
+.footer .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+/* задаем логогтипу блочность */
+/* задаем логотипу нижний отступ */
+.footer .logo {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* задаем шрифты адресу */
+.footer .address {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/* меняем цвет шрифта контактам в адресе */
+.address .text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* задаем верхний и нижний отступ разделу "присоединяйтесь" */
+.join {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+/* задаем нижний отступ названиям разделов "присоедняйтесь" и "подпишитесь" */
+/* задаем шрифт разделам "присоедняйтесь" и "подпишитесь" */
+.join-head,
+.subscription-head {
+  display: block;
+  margin-bottom: 21px;
+
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* задаем флекс списку соц.сетей */
+/* убираем верхний, нижний и левый зазоры списка соц.сетей */
+.join ul {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* задаем правый зазор элементам списка соц.сетей */
+.join li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.footer .link:hover,
+.footer .link:focus {
+  background-color: var(--main-accent-color);
+  cursor: pointer;
+}
+
+.form-subscription {
+  display: flex;
+  justify-content: center;
+}
+
+.input-subscription {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.input-subscription:focus {
+  outline: 0;
+  border: 1px solid var(--main-accent-color);
+}
+
+/* убираем верхний и нижний зазоры кнопки "подписатся" */
+/* задаем шрифт кнопке "подписатся */
+.button-subscription {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 8px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 200px;
+
+  align-items: center;
+
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: start;
+
+  color: currentColor;
+  background-color: var(--main-accent-color);
+  cursor: pointer;
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+/* задаем верхний и нижний отступ подписи разработчка */
+/* задаем верхнюю рамку подписи разработчка */
+/* задаем цвет шрифта пдписи разработчика */
+.developers {
+  padding-top: 18px;
+  padding-bottom: 21px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* убираем верхний и нижний внешние зазоры пдписи разработчика и горизонтально центруем*/
+.developers > p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
