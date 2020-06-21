@@ -2,7 +2,8 @@
 @import "./utils/commonsettings";
 @import "./utils/variables";
 @import "./utils/placeholder";
-@import "./components/logo";
-@import "./components/page-header";
+@import "./components/general/logo";
+@import "./components/general/page-header";
 @import "./components/hero";
 @import "./components/form-order";
+@import "./components/features";
