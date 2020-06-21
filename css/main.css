@@ -78,7 +78,7 @@ ul {
   color: #757575;
 }
 
-.page-header, .features, .work-area, .team .team-area, .clients-area, .footer-area {
+.page-header, .footer-area, .features, .work-area, .team .team-area, .clients-area {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -180,6 +180,176 @@ ul {
 .icon-contacts {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.footer {
+  color: #ffffff;
+  background-color: #2f303a;
+}
+
+.footer-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .logo {
+  display: block;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* footer */
+/* задаем шрифты адресу */
+.footer-address {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-address .text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-address > p:not(:last-child) {
+  padding-bottom: 9px;
+}
+
+/* задаем верхний и нижний отступ разделу "присоединяйтесь" */
+.join-head {
+  display: block;
+  margin-bottom: 21px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.join-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.join-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-item .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.join-item .link:hover, .join-item .link:focus {
+  background-color: #2196f3;
+  cursor: pointer;
+}
+
+.join-item .icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.subscription-head {
+  display: block;
+  margin-bottom: 21px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.form-subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input-subscription {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.input-subscription:focus {
+  outline: 0;
+  border: 1px solid #2196f3;
+}
+
+.button-subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 8px;
+  border: none;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: start;
+  color: currentColor;
+  background-color: #2196f3;
+  cursor: pointer;
+}
+
+.button-subscription .icon-send {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
 }
 
 .hero {
@@ -453,17 +623,14 @@ ul {
 
 .button-close {
   position: absolute;
-  top: -9px;
-  right: -9px;
+  top: 8px;
+  right: 8px;
   width: 30px;
   width: 30px;
   height: 30px;
-  border: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background: #ffffff;
-  -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
 }
 
 .form-close {
@@ -765,175 +932,5 @@ ul {
 
 .icon-client.client-logo-6 {
   width: 88.48px;
-}
-
-.footer {
-  color: #ffffff;
-  background-color: #2f303a;
-}
-
-.footer-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.footer .logo {
-  display: block;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-/* footer */
-/* задаем шрифты адресу */
-.footer-address {
-  font-style: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-
-.footer-address .text {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-address > p:not(:last-child) {
-  padding-bottom: 9px;
-}
-
-/* задаем верхний и нижний отступ разделу "присоединяйтесь" */
-.join-head {
-  display: block;
-  margin-bottom: 21px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.join-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.join-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.join-item .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.join-item .link:hover, .join-item .link:focus {
-  background-color: #2196f3;
-  cursor: pointer;
-}
-
-.join-item .icon-social {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.subscription-head {
-  display: block;
-  margin-bottom: 21px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.form-subscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.input-subscription {
-  width: 358px;
-  height: 50px;
-  margin-right: 12px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
-  padding-right: 16px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  background-color: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-.input-subscription:focus {
-  outline: 0;
-  border: 1px solid #2196f3;
-}
-
-.button-subscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 29px;
-  padding-right: 8px;
-  border: none;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  min-width: 200px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  text-align: start;
-  color: currentColor;
-  background-color: #2196f3;
-  cursor: pointer;
-}
-
-.button-subscription .icon-send {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
 }
 /*# sourceMappingURL=main.css.map */
