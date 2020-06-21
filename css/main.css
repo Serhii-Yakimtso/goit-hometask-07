@@ -33,6 +33,22 @@ img {
   height: auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
 .checkbox, .features h2 {
   position: absolute;
   width: 1px;
@@ -44,7 +60,7 @@ img {
   overflow: hidden;
 }
 
-.page-header, .features, .work-area {
+.page-header, .features, .work-area, .team .team-area {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -57,12 +73,12 @@ img {
   cursor: pointer;
 }
 
-.features-area, .work {
+.features-area, .work, .team {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.features-item .title, .work .title {
+.features-item .title, .work .title, .team .title {
   color: #212121;
 }
 
@@ -498,7 +514,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.features .icon-box {
+.features-icon {
   display: block;
   width: 270px;
   height: 120px;
@@ -511,7 +527,7 @@ img {
   background: #f5f4fa;
 }
 
-.features .icon-box .icon {
+.features-icon .icon {
   width: 70px;
   height: 70px;
 }
@@ -570,5 +586,111 @@ img {
   text-align: center;
   background: rgba(47, 48, 58, 0.8);
   color: #ffffff;
+}
+
+.team {
+  background-color: #f5f4fa;
+}
+
+.team .title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.team .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.team-card {
+  width: calc((100%-90px) / 4);
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+}
+
+.team-card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-card img {
+  margin-bottom: 30px;
+}
+
+.team-card .title-name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.team-card .text {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.team-card .title-name,
+.team-card .text {
+  text-align: center;
+}
+
+.team-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team-social li {
+  padding-bottom: 24px;
+}
+
+.team-social li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social .link:hover, .team-social .link:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* задаем зазор между соцсетями в карточке члена команды */
+.icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 /*# sourceMappingURL=main.css.map */
