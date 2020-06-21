@@ -1,0 +1,886 @@
+/* общее */
+/* цвет текста в заголовках */
+.section .title {
+  color: var(--main-title-color);
+}
+
+/* цвет сопровождающего текста */
+.section .text {
+  color: var(--primary-text-color);
+}
+
+/* нижний отступ между сециями */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* секция "герой" */
+/* задаем размеры секции и отступы + центририуем секцию */
+/* добавляем изображение */
+/* цвет текста в герое + центровка текста */
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  height: 600px;
+
+  text-align: center;
+
+  color: #ffffff;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/index-hero-01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background: rgba(47, 48, 58, 0.8); */
+}
+
+/* убираем отступы в заголовке + задаем шрифт */
+.hero > h1 {
+  margin-top: 0;
+  margin-bottom: 46px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* задаем шрифт кнопке */
+.hero .button-order {
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border: 0;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  background-color: var(--main-accent-color);
+  cursor: pointer;
+}
+
+/* оформляем backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* оформляем форму заказа услуги */
+.order {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 40px;
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: #fff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+/* форма заказа услуги */
+/* заголовок формы */
+.order-title {
+  margin: 0 0 30px 0;
+  /* margin-bottom: 30px; */
+  padding: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--main-title-color);
+}
+
+.order-name,
+.order-tel,
+.order-email,
+.order-comment,
+.order-agree {
+  position: relative;
+  /* outline: 1px solid tomato; */
+
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+
+  color: var(--primary-text-color);
+}
+.agree > a {
+  color: var(--main-accent-color);
+  text-decoration: underline;
+}
+
+.order-name,
+.order-tel,
+.order-email,
+.order-comment {
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+}
+
+.order-agree {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.order-name,
+.order-tel,
+.order-email {
+  margin-bottom: 28px;
+}
+
+.order-comment {
+  margin-bottom: 20px;
+}
+
+.order-agree {
+  margin-bottom: 30px;
+}
+
+.order-name > input,
+.order-tel > input,
+.order-email > input,
+.order-comment > textarea {
+  display: block;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+
+.order-name > input,
+.order-tel > input,
+.order-email > input {
+  padding-left: 42px;
+  padding-right: 18px;
+  height: 40px;
+}
+
+.order-comment > textarea {
+  resize: none;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  height: 120px;
+}
+
+.order-name .name,
+.order-tel .tel,
+.order-email .email {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+
+  transform: translateY(-50%);
+  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    left 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-comment .comment {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:not(:placeholder-shown) + .name,
+.form-input:not(:placeholder-shown) + .tel,
+.form-input:not(:placeholder-shown) + .email,
+.form-input:not(:placeholder-shown) + .comment {
+  top: -10px;
+  left: 16px;
+  color: var(--main-accent-color);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: var(--main-title-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:not(:placeholder-shown) ~ .form-icon {
+  fill: var(--main-accent-color);
+}
+
+.checkbox {
+  /* appearance: none; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.agree {
+  padding-left: 30px;
+}
+
+.icon-checkbox,
+.icon-noncheckbox {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-checkbox {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .icon-checkbox {
+  opacity: 1;
+}
+.checkbox:checked ~ .icon-noncheckbox {
+  opacity: 0;
+}
+
+.button-send {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+  padding-right: 55px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--main-background-color);
+
+  border: 0;
+  background: var(--main-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-close {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 30px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.form-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 11px;
+}
+
+/* секция "особенность" */
+/* добавляем флекс списку */
+/* убираем верхний, нижний и левый отступ у списка */
+.features ul {
+  display: flex;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* задаем ширину элементам списка */
+/* 4 элемента с зазорами 30px */
+.features .item {
+  width: calc((100%-90px) / 4);
+}
+
+/* задаем отступы между элементами списка */
+.features .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* задаем блочность изображению с размерами */
+/* задаем отступы под изображением в карточке */
+/* задаем радиус рамке */
+/* задаем задний фон */
+.features .icon-box {
+  display: block;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 4px;
+
+  background: var(--secondary-background-color);
+}
+
+.features .icon {
+  width: 70px;
+  height: 70px;
+}
+
+/* обнуляем верхний и нижний отсутп заголовка и текста в карточке */
+.features h3,
+.features p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* добавляем нижний отступ заголовка в карточке */
+.features h3 {
+  margin-bottom: 10px;
+}
+
+/* задаем шрифт заголовкам в карточках разделов "особенностей" и "наша команда" */
+.features .title,
+.work .title-name {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* задаем шрифт сопросовждающему тексту в карточке */
+.features .text {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/* секция "чем мы занимаемся" */
+/* задаем шрифт заголовков в разделах "Чем мы занимаемся", "Наша команда", "Постоянные клиенты" */
+.section.work .title,
+.section.team .title,
+.section.clients .title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* обнуляем верхние и нижние отступы в заголовках.ю сопровождающем тексте и списке */
+.work h2,
+.work p,
+.work ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* задаем нижний отступ от общего заголовка */
+.work h2 {
+  margin-bottom: 50px;
+}
+
+/* Задаем флекс списку */
+/* обнуляем левый отступ списка */
+.work ul {
+  display: flex;
+  padding-left: 0;
+}
+
+/* задаем ширину карточек в списке */
+/* 3 карточки с зазоами по 30 px */
+.work li {
+  width: calc((100%-60px) / 3);
+}
+
+/* задаем зазоры между карточками в списке */
+.work li:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* обнуляем нижний отступ от изображения в карточке списка */
+.work img {
+  margin-bottom: 0;
+}
+
+.work-card {
+  position: relative;
+}
+.work-card .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  width: 100%;
+  min-height: 70px;
+
+  text-align: center;
+}
+
+/* задаем шрифт сопровождающему тексту в карточке списка */
+/* задаем цвет шрифта сопровождающему тексту в карточке списка */
+.section.work .text {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  background: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
+}
+
+/* секция "наша команда */
+/* задаем задний фон секции */
+.section.team {
+  background-color: var(--secondary-background-color);
+}
+
+/* обнуляем верхний и нижний отступ с заголовков, абзацев и списков */
+.team h2,
+.team h3,
+.team p,
+.team ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* задаем нижний отступ от общего заголовка */
+.team h2 {
+  margin-bottom: 50px;
+}
+
+/* обнуляем левый отступ у списков */
+.team ul {
+  padding-left: 0;
+}
+
+/* центрируем текст заголовков и абзацев */
+.team h2,
+.team h3,
+.team p {
+  text-align: center;
+}
+
+/* задаем флекс списку команды */
+.team .list {
+  display: flex;
+}
+
+/* задаем ширину каждой карточке члена команды */
+/* 4 карточки с тремя зазорами по 30px */
+/* задаем тень карточке */
+.team-card {
+  width: calc((100%-90px) / 4);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+}
+
+/* выставляем зазоры между карточками членов команды */
+.team-card:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* задаем нижний отступ от фотографии в карточке члена команды */
+.team img {
+  margin-bottom: 30px;
+}
+
+/* задаем нижний отступ от имени члена команды в карточке */
+/* задаем шрифт имени члена команды в карточке */
+/* задаем цвет шрифта имени члена команды в карточке */
+.team .title-name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: var(--main-title-color);
+}
+
+/* задаем нижний отступ от профессии в карточке члена команды */
+/* задаем шрифт тексту профессии в карточке члена команды */
+.team .text {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+/* задаем флекс списку соцсетей в карточке члена команды */
+/* центруем контент к списку соцсетей в карточке члена команды */
+.team .social-links {
+  display: flex;
+  justify-content: center;
+}
+
+/* задаем зазор между соцсетями в карточке члена команды */
+.social-links > li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links > li {
+  padding-bottom: 24px;
+}
+
+.team .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team .icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* задаем фокус списку соцсетей в карточке члена команды */
+.team .link:hover,
+.team .link:focus {
+  color: #ffffff;
+
+  background-color: var(--main-accent-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* секция Постоянные клиенты */
+/* обнуляем верхний зазор заголовка и задаем нижний */
+.clients .title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+/* задаем флекс списку иконок клиентов */
+/* центрируем контент в списке иконок клиентов */
+/* обнуляем верхний, левый и нижний зазор списка иконок клиентов */
+.clients ul {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* задаем флекс иконкам клиентов для центрирования */
+/* задаем размеры блоку иконки и рамку */
+/* .clients li {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  color: #afb1b8;
+} */
+
+/* задаем правый отступ между иконками списка клиентов */
+.clients li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients a {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients a:hover,
+.clients a:focus {
+  border-color: var(--main-accent-color);
+  color: var(--main-accent-color);
+  cursor: pointer;
+}
+
+.icon-client {
+  fill: currentColor;
+}
+
+.client-logo-1 {
+  width: 42.27px;
+  /* height: 49.23px; */
+}
+.client-logo-2 {
+  width: 40px;
+  /* height: 52px; */
+}
+.client-logo-3 {
+  width: 41px;
+  /* height: 42.6px; */
+}
+.client-logo-4 {
+  width: 79.66px;
+  /* height: 42.02px; */
+}
+.client-logo-5 {
+  width: 59px;
+  /* height: 47px; */
+}
+.client-logo-6 {
+  width: 88.48px;
+  /* height: 45.44px; */
+}
+
+/* Портфолио */
+
+.portfolio {
+  border-top: 1px solid #ececec;
+}
+/* задаем флекс списку кнопок фильтра */
+/* центрируем кнопки фильтра */
+/* УБираем верхний, нижнний и левый отступ у списка кнопок фильтра */
+.filter {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-left: 0;
+}
+
+/* задаем зазор межд кнопками фильтра */
+.filter > li {
+  margin-right: 8px;
+}
+
+/* кнопки-фильтр портфолио */
+/* задаем зазор внутри кнопок */
+/* задаем внутрений фон и радиус */
+/* задаем шрифт кнопок */
+.filter .button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  border: none;
+  background: #f5f4fa;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--main-title-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* задаем ховер и фокус кнопкам фильтра */
+.filter .button:hover,
+.filter .button:focus {
+  color: #ffffff;
+  background-color: var(--main-accent-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* задаем флекс списку работ */
+/* задаем перенос флекса */
+/* обнуляем верхний, нижний и левый отступы списка работ */
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* .cards > li {
+  width: calc((100%-60px) / 3);
+} */
+
+/* задаем правый отступ элементам списка работ */
+.portfolio-cards > li:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+/* задаем нижний отступ элементам списка работ */
+.portfolio-cards > li:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+/* задаем верхние радиусы карточке списка работ */
+/* задаем ширину карточке списка работ */
+.card-area {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+
+  width: 370px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-area:focus,
+.card-area:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.card-box {
+  position: relative;
+  overflow: hidden;
+}
+.card-upper-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  padding-right: 24px;
+  /* opacity: 0; */
+  width: 100%;
+  height: 100%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  /* or 156% */
+  color: #ffffff;
+  letter-spacing: 0.03em;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-area:hover .card-upper-text,
+.card-area:focus .card-upper-text {
+  /* opacity: 1; */
+  transform: translateY(0);
+}
+
+/* задаем внутрение утступы текстового контента карточки списка работ */
+/* задаем рамку (кроме верхней) текстовому контенту карточки списка работ */
+/* задаем нижние радиусы рамке текстового контента карточки списка работ */
+.card-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+/* список наших работ */
+.card-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--main-title-color);
+}
+.card-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
