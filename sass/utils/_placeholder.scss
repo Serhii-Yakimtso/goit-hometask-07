@@ -13,15 +13,6 @@
   outline: 1px solid tomato;
 }
 
-%container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  width: 1200px;
-}
-
 %link {
   &:hover,
   &:focus {
@@ -42,9 +33,15 @@
   color: $color-title-main;
 }
 
-/* цвет сопровождающего текста */
 %section-text {
   color: $color-text-prime;
 }
 
-/* нижний отступ между сециями */
+%container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: 1200px;
+}
