@@ -9,9 +9,6 @@
     @extend %visually-hidden;
   }
 }
-/* задаем флекс списку кнопок фильтра */
-/* центрируем кнопки фильтра */
-/* УБираем верхний, нижнний и левый отступ у списка кнопок фильтра */
 .filter {
   display: flex;
   justify-content: center;
@@ -59,9 +56,6 @@
   }
 }
 
-/* задаем флекс списку работ */
-/* задаем перенос флекса */
-/* обнуляем верхний, нижний и левый отступы списка работ */
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
@@ -80,8 +74,6 @@
   }
 }
 
-/* задаем верхние радиусы карточке списка работ */
-/* задаем ширину карточке списка работ */
 .card-area {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -98,7 +90,6 @@
   }
   &:hover .card-upper-text,
   &:focus .card-upper-text {
-    /* opacity: 1; */
     transform: translateY(0);
   }
 }
@@ -116,7 +107,6 @@
     padding-bottom: 63px;
     padding-left: 24px;
     padding-right: 24px;
-    /* opacity: 0; */
     width: 100%;
     height: 100%;
 
@@ -137,9 +127,6 @@
   }
 }
 
-/* задаем внутрение утступы текстового контента карточки списка работ */
-/* задаем рамку (кроме верхней) текстовому контенту карточки списка работ */
-/* задаем нижние радиусы рамке текстового контента карточки списка работ */
 .card-content {
   padding-top: 20px;
   padding-bottom: 20px;
